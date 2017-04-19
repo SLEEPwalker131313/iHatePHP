@@ -18,13 +18,13 @@
   </div>
   <script>
    $('#firstBTN').click(function(){
-    $('#firstText').text("
+    $('#firstText').text('
      <?php echo 'Текст из пхп!' ?>
-    ");
+    ');
    $('#secondBTN').click(function(){
-    $('#secondText').text(
+    $('#secondText').text('
      <?php echo '""<p>Снова из пхп!""' ?>
-    );
+    ');
    });
   </script>
  </body>
