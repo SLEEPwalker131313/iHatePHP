@@ -1,6 +1,6 @@
 <html>
  <head>
-  <title>Тестируем PHP</title>
+  <title>Сайтик</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
  </head>
@@ -66,8 +66,9 @@
   <script>
    $('#runtime').click(function(){
     $('#runtimeText').html('\
-     <?php echo 'ПХП!!!<br>Хотя и его тут мало.<br>Для красивых кнопочек прикручен\
-      bootstrap<br>Для удобной обработки событий(хотя и для бустрапа он нужен)<br>jquery' ?>\
+     <?php echo 'ПХП!!!<br>Хотя и его тут мало. Для красивых\
+      кнопочек прикручен bootstrap. Для удобной обработки событий \
+      (хотя и для бустрапа он нужен) JQuery' ?>\
     ');
    });
    $('#secondBTN').click(function(){
