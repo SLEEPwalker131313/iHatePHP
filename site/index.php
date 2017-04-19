@@ -7,8 +7,7 @@
  <body>
   <style>
    .btn{
-    height: 70px;
-    word-break:break-all;
+    height: 80px;
    }
   </style>
   <br>
