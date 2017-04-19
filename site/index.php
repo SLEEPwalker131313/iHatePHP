@@ -15,10 +15,10 @@
   </div>
   <script>
    $('#firstBTN').click(function(){
-    <?php '<p>Текст из пхп!</p>'; ?>
+    <?php echo '<p>Текст из пхп!</p>'; ?>
    });
    $('#secondBTN').click(function(){
-    <?php '<p>Второй текст!</p>'; ?>
+    <?php echo '<p>Второй текст!</p>'; ?>
    });
   </script>
  </body>
