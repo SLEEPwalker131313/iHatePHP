@@ -14,7 +14,7 @@
   <script>
    $('#firstBTN').click(function(){
     $('#firstText').html(
-     <?php echo '<p>Текст из ПХП!</p>'; ?>
+     "dsdasdsa"
     );
    });
   </script>
