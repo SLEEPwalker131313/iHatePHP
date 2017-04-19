@@ -13,7 +13,7 @@
   <br>
   <div class="container">
    <div class="row">
-    <div class="btn-group">
+    <div class="btn-group col-md-12">
      <div class="col-md-3 btn btn-danger" id="runtime">
       На каком языке <br> мы написали сайтик?
      </div>
