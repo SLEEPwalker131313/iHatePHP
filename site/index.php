@@ -5,10 +5,25 @@
   <script src="http://code.jquery.com/jquery-latest.js"></script>
  </head>
  <body>
+  <br>
   <div class="container">
    <div class="row">
-    <div class="col-md-4 btn btn-primary">
-     Сложное ли получилось приложение?
+    <div class="btn-group">
+     <div class="col-md-2 btn btn-danger" id="runtime">
+      На каком языке мы написали сайтик?
+     </div>
+     <div class="col-md-2 btn btn-primary" id="hardLevel">
+      Сложный ли он получился?
+     </div>
+     <div class="col-md-2 btn btn-primary" id="github">
+      Почему у такого плохого плохого сайта так много комитов?
+     </div>
+     <div class="col-md-2 btn btn-primary" id="DB">
+      Почему мы берём эти строки не из базы?
+     </div>
+     <div class="col-md-2 btn btn-danger" id="date">
+      Ну и дату давайте вернём, что уж мы
+     </div>
     </div>
    </div>
   </div>
