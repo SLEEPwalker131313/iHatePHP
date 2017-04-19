@@ -13,12 +13,18 @@
   <div id="firstText">
    Default text
   </div>
+  <div id="secondText">
+   Default text
+  </div>
   <script>
    $('#firstBTN').click(function(){
-    <?php echo '<p>Текст из пхп!</p>'; ?>
-   });
+    $('#firstText').html(
+     <?php echo '<p>Текст из пхп!</p>'; ?>
+    );
    $('#secondBTN').click(function(){
-    <?php echo '<p>Второй текст!</p>'; ?>
+    $('#secondText').html(
+     <?php echo '<p>Снова из пхп!</p>'; ?>
+    );
    });
   </script>
  </body>
