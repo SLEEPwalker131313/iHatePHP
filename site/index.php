@@ -42,6 +42,7 @@
    </div>
   </div>
   <script>
+  //Обработка кликов по кнопкам
    $('#runtime').click(function(){
     $('#runtimeText').html('\
      <?php echo 'ПХП!!!<br>Хотя и его тут мало. Для красивых\
@@ -76,6 +77,7 @@
    });
   </script>
   <script language = "JavaScript">
+  //Для картинки
     var bigsize = "650";
     var smallsize = "230";
     function changeSizeImage(im) {
