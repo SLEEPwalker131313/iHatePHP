@@ -46,8 +46,8 @@
    $('#runtime').click(function(){
     $('#runtimeText').html('\
      <?php echo 'ПХП!!!<br>Хотя и его тут мало. Для красивых\
-      кнопочек прикручен bootstrap. Для удобной обработки событий \
-      (хотя и для бустрапа он нужен) JQuery' ?>\
+      кнопочек прикручен <mark>bootstrap</mark>. Для удобной обработки событий \
+      (хотя и для бустрапа он нужен) <mark>JQuery</mark>' ?>\
     ');
    });
    $('#hardLevel').click(function(){
@@ -63,7 +63,7 @@
    });
    $('#DB').click(function(){
     $('#DBText').html('\
-     <?php echo '<img src="img.jpg" height="250" onclick="changeSizeImage(this)" style="cursor: pointer">' ?>\
+     <?php echo '<img src="img/img.jpg" height="250" onclick="changeSizeImage(this)" style="cursor: pointer">' ?>\
     ');
    });
    $('#date').click(function(){
@@ -75,15 +75,6 @@
     ?>
     ');
    });
-  </script>
-  <script language = "JavaScript">
-  //Для картинки
-    var bigsize = "650";
-    var smallsize = "230";
-    function changeSizeImage(im) {
-      if(im.height == bigsize) im.height = smallsize;
-      else im.height = bigsize;
-    }
   </script>
   <script src="js/bootstrap.min.js"></script>
  </body>
