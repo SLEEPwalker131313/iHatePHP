@@ -34,19 +34,19 @@
    <div class="row" style="height: 100px">
     <div class="btn-group col-md-12">
      <div class="col-md-3" id="runtimeText">
-   
+
      </div>
      <div class="col-md-2" id="hardLevelText">
-      
+
      </div>
      <div class="col-md-2" id="githubText">
-      
+
      </div>
      <div class="col-md-2" id="DBText">
-      
+
      </div>
      <div class="col-md-3" id="dateText">
-      
+
      </div>
     </div>
    </div>
@@ -64,9 +64,9 @@
    Default text
   </div>
   <script>
-   $('#firstBTN').click(function(){
-    $('#firstText').html('\
-     <?php echo 'Текст из пхп!' ?>\
+   $('#runtime').click(function(){
+    $('#runtimeText').html('\
+     <?php echo 'ПХП!!!' ?>\
     ');
    });
    $('#secondBTN').click(function(){
