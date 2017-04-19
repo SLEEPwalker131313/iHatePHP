@@ -2,6 +2,7 @@
  <head>
   <title>Тестируем PHP</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
  </head>
  <body>
  <?php echo '<p>Привет, мир!</p>'; ?>
@@ -28,8 +29,6 @@
     ');
    });
   </script>
-  
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="js/bootstrap.min.js"></script>
  </body>
 </html>
