@@ -66,7 +66,8 @@
   <script>
    $('#runtime').click(function(){
     $('#runtimeText').html('\
-     <?php echo 'ПХП!!!' ?>\
+     <?php echo 'ПХП!!!<br>Хотя и его тут мало.<br>Для красивых кнопочек прикручен\
+      bootstrap<br>Для удобной обработки событий(хотя и для бустрапа он нужен)<br>jquery' ?>\
     ');
    });
    $('#secondBTN').click(function(){
