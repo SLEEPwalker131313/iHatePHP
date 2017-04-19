@@ -62,7 +62,7 @@
    });
    $('#DB').click(function(){
     $('#DBText').html('\
-     <?php echo 'Попробуем вставить картинку' ?>\
+     <?php echo '<img src="img.jpg" height="150" onclick="changeSizeImage(this)">' ?>\
     ');
    });
    $('#date').click(function(){
@@ -74,6 +74,14 @@
     ?>
     ');
    });
+  </script>
+  <script language = "JavaScript">
+    var bigsize = "300";
+    var smallsize = "150";
+    function changeSizeImage(im) {
+      if(im.height == bigsize) im.height = smallsize;
+      else im.height = bigsize;
+    }
   </script>
   <script src="js/bootstrap.min.js"></script>
  </body>
