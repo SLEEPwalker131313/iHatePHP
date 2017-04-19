@@ -62,7 +62,7 @@
    });
    $('#DB').click(function(){
     $('#DBText').html('\
-     <?php echo '<img src="img.jpg" height="250" onclick="changeSizeImage(this)">' ?>\
+     <?php echo '<img src="img.jpg" height="250" onclick="changeSizeImage(this)" style="cursor: pointer">' ?>\
     ');
    });
    $('#date').click(function(){
@@ -76,8 +76,8 @@
    });
   </script>
   <script language = "JavaScript">
-    var bigsize = "500";
-    var smallsize = "250";
+    var bigsize = "650";
+    var smallsize = "230";
     function changeSizeImage(im) {
       if(im.height == bigsize) im.height = smallsize;
       else im.height = bigsize;
