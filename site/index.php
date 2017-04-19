@@ -16,19 +16,19 @@
    <div class="row">
     <div class="btn-group">
      <div class="col-md-3 btn btn-danger" id="runtime">
-      На каком языке мы написали сайтик?
+      На каком языке <br> мы написали сайтик?
      </div>
      <div class="col-md-2 btn btn-primary" id="hardLevel">
-      Сложный ли он получился?
+      Сложный ли он <br> получился?
      </div>
      <div class="col-md-2 btn btn-primary" id="github">
-      Почему у такого плохого плохого сайта так много комитов?
+      Почему у такого <br>плохого сайта так много<br> комитов?
      </div>
      <div class="col-md-2 btn btn-primary" id="DB">
-      Почему мы берём эти строки не из базы?
+      Почему мы берём эти <br>строки не из базы?
      </div>
      <div class="col-md-3 btn btn-success" id="date">
-      Ну и дату давайте вернём, что уж мы
+      Ну и дату давайте вернём,<br> что уж мы
      </div>
     </div>
    </div>
