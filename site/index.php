@@ -3,6 +3,7 @@
   <title>Сайтик</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/action.js"/>
  </head>
  <body>
   <style>
