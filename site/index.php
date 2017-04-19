@@ -3,7 +3,6 @@
   <title>Сайтик</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <script src="js/action.js"></script>
  </head>
  <body>
   <style>
@@ -42,20 +41,38 @@
     </div>
    </div>
   </div>
- <?php echo '<p>Привет, мир!</p>'; ?>
- <div style="color: red" id="firstBTN">
-  Click it 1
- </div> <div style="color: red" id="secondBTN">
-  Click it 2
- </div>
-  <div id="firstText">
-   Default text
-  </div>
-  <div id="secondText">
-   Default text
-  </div>
   <script>
-   
+   $('#runtime').click(function(){
+    $('#runtimeText').html('\
+     <?php echo 'ПХП!!!<br>Хотя и его тут мало. Для красивых\
+      кнопочек прикручен bootstrap. Для удобной обработки событий \
+      (хотя и для бустрапа он нужен) JQuery' ?>\
+    ');
+   });
+   $('#hardLevel').click(function(){
+    $('#hardLevelText').html('\
+     <?php echo '<H1>Увы</H1>' ?>\
+    ');
+   });
+   $('#github').click(function(){
+    $('#githubText').html('\
+     <?php echo 'К сожеланию, кроме WEB-brower-а не было ничего и пришлось \
+     кодить и сразу комитить даже малейшие изменения сразу в гит' ?>\
+    ');
+   });
+   $('#DB').click(function(){
+    $('#DBText').html('\
+     <?php echo 'Попробуем вставить картинку' ?>\
+    ');
+   });
+   $('#date').click(function(){
+    $('#dateText').html('\
+    <?php
+      date_default_timezone_set('UTC');
+      echo date("l");
+    ?>
+    ');
+   });
   </script>
   <script src="js/bootstrap.min.js"></script>
  </body>
