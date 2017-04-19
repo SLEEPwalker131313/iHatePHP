@@ -31,6 +31,25 @@
      </div>
     </div>
    </div>
+   <div class="row">
+    <div class="btn-group col-md-12">
+     <div class="col-md-3" id="runtimeText">
+   
+     </div>
+     <div class="col-md-2" id="hardLevelText">
+      
+     </div>
+     <div class="col-md-2" id="githubText">
+      
+     </div>
+     <div class="col-md-2" id="DBText">
+      
+     </div>
+     <div class="col-md-3" id="dateText">
+      
+     </div>
+    </div>
+   </div>
   </div>
  <?php echo '<p>Привет, мир!</p>'; ?>
  <div style="color: red" id="firstBTN">
