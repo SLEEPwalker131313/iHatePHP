@@ -19,11 +19,11 @@
   <script>
    $('#firstBTN').click(function(){
     $('#firstText').text(
-     <?php echo '"Текст из пхп!"' ?>
+     <?php echo '\"Текст из пхп!\"' ?>
     );
    $('#secondBTN').click(function(){
     $('#secondText').text(
-     <?php echo '"<p>Снова из пхп!"' ?>
+     <?php echo '\"<p>Снова из пхп!\"' ?>
     );
    });
   </script>
