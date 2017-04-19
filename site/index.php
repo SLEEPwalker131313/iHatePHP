@@ -21,6 +21,7 @@
     $('#firstText').html('\
      <?php echo 'Текст из пхп!' ?>\
     ');
+   });
    $('#secondBTN').click(function(){
     $('#secondText').html('\
      <?php echo '<p>Снова из пхп!' ?>\
