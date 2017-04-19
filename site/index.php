@@ -1,7 +1,7 @@
 <html>
  <head>
   <title>Тестируем PHP</title>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
  </head>
  <body>
  <?php echo '<p>Привет, мир!</p>'; ?>
@@ -28,5 +28,8 @@
     ');
    });
   </script>
+  
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/bootstrap.min.js"></script>
  </body>
 </html>
