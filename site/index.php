@@ -56,7 +56,7 @@
    });
    $('#github').click(function(){
     $('#githubText').html('\
-     <?php echo 'К сожеланию, кроме WEB-brower-а не было ничего и пришлось \
+     <?php echo 'К сожеланию, кроме WEBbrowser-а не было ничего и пришлось \
      кодить и сразу комитить даже малейшие изменения сразу в гит' ?>\
     ');
    });
@@ -69,7 +69,8 @@
     $('#dateText').html('\
     <?php
       date_default_timezone_set('UTC');
-      echo date("l");
+      $today = date("F j, Y, g:i a");
+      echo $today;
     ?>
     ');
    });
