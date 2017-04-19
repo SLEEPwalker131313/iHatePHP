@@ -15,6 +15,8 @@
    $('#firstBTN').click(function(){
     $('#firstText').html(
      "dsdasdsa"
+     "<?php echo '<p>Привет, мир!</p>'; ?>"
+     <?php '<p>Привет, мир!</p>'; ?>
     );
    });
   </script>
