@@ -5,6 +5,13 @@
   <script src="http://code.jquery.com/jquery-latest.js"></script>
  </head>
  <body>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-4 btn btn-primary">
+     Сложное ли получилось приложение?
+    </div>
+   </div>
+  </div>
  <?php echo '<p>Привет, мир!</p>'; ?>
  <div style="color: red" id="firstBTN">
   Click it 1
