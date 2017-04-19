@@ -5,11 +5,16 @@
   <script src="http://code.jquery.com/jquery-latest.js"></script>
  </head>
  <body>
+  <style>
+   .btn{
+    height: 100px;
+   }
+  </style>
   <br>
   <div class="container">
    <div class="row">
     <div class="btn-group">
-     <div class="col-md-2 btn btn-danger" id="runtime">
+     <div class="col-md-3 btn btn-danger" id="runtime">
       На каком языке мы написали сайтик?
      </div>
      <div class="col-md-2 btn btn-primary" id="hardLevel">
@@ -21,7 +26,7 @@
      <div class="col-md-2 btn btn-primary" id="DB">
       Почему мы берём эти строки не из базы?
      </div>
-     <div class="col-md-2 btn btn-danger" id="date">
+     <div class="col-md-3 btn btn-success" id="date">
       Ну и дату давайте вернём, что уж мы
      </div>
     </div>
