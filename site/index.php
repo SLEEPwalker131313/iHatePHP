@@ -31,7 +31,7 @@
      </div>
     </div>
    </div>
-   <div class="row">
+   <div class="row" style="height: 100px">
     <div class="btn-group col-md-12">
      <div class="col-md-3" id="runtimeText">
    
