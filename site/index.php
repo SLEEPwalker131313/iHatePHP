@@ -166,7 +166,10 @@
       foreach($value as $keyv => $valuev) {
         if(strcasecmp($keyv, 'commit')) {
           foreach($valuev as $keyvv => $valuevv) {
+            echo '\nstartcommit\n';
             echo $keyvv." has the value ". $valuevv." ";
+            echo '\nendcommit\n';
+
           }
         }
         if(strcasecmp($keyv, 'html_url') || strcasecmp($keyv, 'login')
