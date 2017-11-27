@@ -153,7 +153,7 @@
     // echo gettype($commits(1));
     foreach ($commits as &$value) {
       echo $value;
-      echo ' '
+      echo ' ';
     }
 
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
