@@ -166,9 +166,20 @@
       // if(strcasecmp($key, 'commit')) {
         // foreach($valuev as $keyvv => $valuevv) {
           foreach($commitContent as $commitLocalKey => $commitLocalValue) {
-            if(strcasecmp($commitLocalKey, 'html_url') == 0)
+            if(strcasecmp($commitLocalKey, 'html_url') == 0
+            || strcasecmp($commitLocalKey, 'login') == 0
+            || strcasecmp($commitLocalKey, 'avatar_url') == 0) {
               echo $commitLocalKey." has the value ". $commitLocalValue." ";
           }
+          if(strcasecmp($commitLocalKey, 'commit') == 0) {
+            echo '\ncommitstart\n';
+            foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValu2) {
+              echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
+            }
+            echo '\ncommitstart\n';
+            
+          }
+        }
         // }
       // }
       // foreach($value as $keyv => $valuev) {
