@@ -174,7 +174,17 @@
           if(strcasecmp($commitLocalKey, 'commit') == 0) {
             echo '\ncommitstart\n';
             foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
-              echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
+              if(strcasecmp($commitLocalKey2, 'message') == 0) {}
+                echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
+
+              if(strcasecmp($commitLocalKey2, 'committer') == 0) {
+                echo '\ncommitterstart\n';
+                foreach($commitLocalValue2 as $committerLocalKey => $committerLocalValue) {
+                  // if(strcasecmp($commitLocalKey2, 'message') == 0)
+                    echo $committerLocalKey." has the value ". $committerLocalValue." ";
+                // }
+                echo '\ncommitterstart\n';
+              }
             }
             echo '\ncommitstart\n';
 
