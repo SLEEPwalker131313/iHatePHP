@@ -160,7 +160,9 @@
     // }
     foreach($commits as $key => $value)
     {
-      echo $key." has the value". $value;
+      foreach($value as $keyv => $valuev) {
+        echo $keyv." has the value". $valuev;
+      }
     }
 
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
