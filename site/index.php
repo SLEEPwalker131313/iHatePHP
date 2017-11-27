@@ -42,7 +42,8 @@
     </div>
    </div>
    <div class="row">
-     <div class ="btn btn-default" id="gitBtn">Git</div>
+     <div class="btn btn-default" id="gitBtn">Git</div>
+     <div id="gitBox">some text</div>
    </div>
   </div>
   <script>
@@ -116,7 +117,8 @@
 // print_r($feeds);
     //console.log("test");
     //console.log();
-    console.log(<?php
+    $('#gitBox').html('\
+    <?php
         function github_request($url)
     {
       // echo "test";
@@ -148,7 +150,7 @@
     echo $events;
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
     // echo $feeds;
-    ?>);
+    ?>');
    });
   </script>
   <script src="js/bootstrap.min.js"></script>
