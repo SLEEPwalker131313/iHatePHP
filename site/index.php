@@ -168,7 +168,9 @@
             echo $keyvv." has the value ". $valuevv." ";
           }
         }
-        echo $keyv." has the value ". $valuev." ";
+        if(strcasecmp($keyv, 'html_url') || strcasecmp($keyv, 'login')
+        || strcasecmp($keyv, 'avatar_url') || strcasecmp($keyv, 'avatar_url'))
+          echo $keyv." has the value ". $valuev." ";
       }
       echo '\n'.$i.'\n';
     }
