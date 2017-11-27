@@ -82,8 +82,8 @@
 
    $('#gitBtn').click(function(){
     console.log(<?php
-    function github_request($url)
-{
+//     function github_request($url)
+// {
   echo "test";
 //   $ch = curl_init();
 //
@@ -106,7 +106,7 @@
 //   curl_close($ch);
 //   $result = json_decode(trim($output), true);
 //   return $result;
-}
+// }
 // $repos = github_request('https://api.github.com/user/repos?page=1&per_page=100');
 // print_r($response);
 // //$events = github_request('https://api.github.com/users/:username/events?page=1&per_page=5');
