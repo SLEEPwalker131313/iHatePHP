@@ -120,7 +120,7 @@
     function github_request($url)
     {
       echo 221;
-      echo $url;
+      //echo $url;
       return 321;
     }
     ?>);
