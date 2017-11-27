@@ -117,12 +117,7 @@
     //console.log("test");
     //console.log();
     console.log(<?php
-    function github_request($url)
-    {
       echo 221;
-      //echo $url;
-      return 321;
-    }
     ?>);
    });
   </script>
