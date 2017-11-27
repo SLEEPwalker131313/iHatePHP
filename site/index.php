@@ -174,11 +174,10 @@
           if(strcasecmp($commitLocalKey, 'commit') == 0) {
             echo '\ncommitstart\n';
             foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
-              if($commitLocalKey, 'message') == 0) {
-                echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
-              }
+              echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
             }
             echo '\ncommitstart\n';
+
           }
         }
         // }
