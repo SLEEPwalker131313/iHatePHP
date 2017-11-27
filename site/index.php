@@ -158,7 +158,7 @@
     //   }
     //   echo '\n';
     // }
-    return gettype($commits);
+    print_r(gettype($commits));
 
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
     // echo $feeds;
