@@ -151,13 +151,14 @@
     // echo $events;
     $commits = github_request('https://api.github.com/repos/SLEEPwalker131313/iHatePHP/commits');
     // echo gettype($commits(1));
-    foreach ($commits as &$value) {
-      foreach ($value as &$tmp) {
-        echo $tmp;
-        echo ' ';
-      }
-      echo '\n';
-    }
+    // foreach ($commits as &$value) {
+    //   foreach ($value as &$tmp) {
+    //     echo $tmp;
+    //     echo ' ';
+    //   }
+    //   echo '\n';
+    // }
+    echo $commits;
 
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
     // echo $feeds;
