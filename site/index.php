@@ -163,9 +163,9 @@
     foreach($commits as $key => $value)
     {
       $i = $i + 1;
-      if(strcasecmp($keyv, 'commit')) {
+      if(strcasecmp($key, 'commit')) {
         // foreach($valuev as $keyvv => $valuevv) {
-          echo $keyv." has the value ". $value." ";
+          echo $key." has the value ". $value." ";
         // }
       }
       // foreach($value as $keyv => $valuev) {
@@ -174,8 +174,8 @@
       //       echo $keyvv." has the value ". $valuevv." ";
       //     }
       //   }
-        if(strcasecmp($keyv, 'html_url') || strcasecmp($keyv, 'login')
-        || strcasecmp($keyv, 'avatar_url') || strcasecmp($keyv, 'avatar_url'))
+        if(strcasecmp($key, 'html_url') || strcasecmp($key, 'login')
+        || strcasecmp($key, 'avatar_url') || strcasecmp($key, 'avatar_url'))
           echo $key." has the value ". $value." ";
           }
       echo '\n'.$i.'\n';
