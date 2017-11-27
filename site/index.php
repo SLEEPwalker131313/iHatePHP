@@ -171,6 +171,14 @@
             || strcasecmp($commitLocalKey, 'avatar_url') == 0) {
               echo $commitLocalKey." has the value ". $commitLocalValue." ";
           }
+          if(strcasecmp($commitLocalKey, 'author') == 0) {
+            echo '\nauthorstart\n';
+            foreach($commitLocalValue as $authorLocalKey => $authorLocalValue) {
+              // if(strcasecmp($commitLocalKey2, 'message') == 0)
+                echo $authorLocalKey." has the value ". $authorLocalValue." ";
+            }
+            echo '\nauthorerend\n';
+          }
           if(strcasecmp($commitLocalKey, 'commit') == 0) {
             echo '\ncommitstart\n';
             foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
