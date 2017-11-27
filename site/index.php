@@ -135,7 +135,7 @@
       curl_setopt($ch, CURLOPT_USERAGENT, 'Agent smith');
       curl_setopt($ch, CURLOPT_HEADER, 0);
       curl_setopt($ch, CURLOPT_USERPWD, $access);
-      curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+      curl_setopt($ch, CURLOPT_TIMEOUT, 300);
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
       curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
       curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
@@ -158,12 +158,14 @@
     //   }
     //   echo '\n';
     // }
+    $i = 0;
     foreach($commits as $key => $value)
     {
+      $i = $i + 1;
       foreach($value as $keyv => $valuev) {
         echo $keyv." has the value". $valuev." ";
       }
-      echo '\n';
+      echo '\n'.$i.'\n';
     }
 
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
