@@ -128,7 +128,7 @@
       // https://developer.github.com/v3/auth/
       // https://github.com/blog/1509-personal-api-tokens
       // https://github.com/settings/tokens
-      $access = 'username:token';
+      $access = 'tenminutesgit:10minutesgitpassword';
 
       curl_setopt($ch, CURLOPT_URL, $url);
       //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/xml'));
@@ -150,7 +150,7 @@
     // $events = github_request('https://api.github.com/users/:username/events/public?page=1&per_page=5');
     // echo $events;
     $commits = github_request('https://api.github.com/repos/SLEEPwalker131313/iHatePHP/commits');
-    return $commits;
+    echo $commits;
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
     // echo $feeds;
     ?>');
