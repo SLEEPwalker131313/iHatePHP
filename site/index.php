@@ -128,7 +128,7 @@
       // https://developer.github.com/v3/auth/
       // https://github.com/blog/1509-personal-api-tokens
       // https://github.com/settings/tokens
-      $access = 'tenminutesgit:960e7e8caa2cfb55a25fed0480ed5d74fe705a9f';
+      $access = 'tenminutesgit:tenminutesgitpassword';
 
       curl_setopt($ch, CURLOPT_URL, $url);
       //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/xml'));
