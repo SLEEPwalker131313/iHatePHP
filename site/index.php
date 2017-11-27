@@ -173,11 +173,11 @@
           }
           if(strcasecmp($commitLocalKey, 'commit') == 0) {
             echo '\ncommitstart\n';
-            foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValu2) {
+            foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
               echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
             }
             echo '\ncommitstart\n';
-            
+
           }
         }
         // }
