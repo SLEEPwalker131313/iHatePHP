@@ -116,7 +116,13 @@
 // print_r($feeds);
     //console.log("test");
     //console.log();
-    console.log(<?php echo 123 ?>);
+    console.log(<?php
+    function github_request($url)
+    {
+      echo 123;
+      return 321;
+    }
+    ?>);
    });
   </script>
   <script src="js/bootstrap.min.js"></script>
