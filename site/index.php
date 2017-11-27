@@ -160,12 +160,14 @@
     // }
 
     $i = 0;
-    foreach($commits as $key => $value)
+    foreach($commits as $commitLocalNumber => $commitContent)
     {
       $i = $i + 1;
       // if(strcasecmp($key, 'commit')) {
         // foreach($valuev as $keyvv => $valuevv) {
-          echo $key." has the value ". $value." ";
+          foreach($commitContent as $commitLocalKey => $commitLocalValue) {
+            echo $commitLocalKey." has the value ". $commitLocalValue." ";
+          }
         // }
       // }
       // foreach($value as $keyv => $valuev) {
