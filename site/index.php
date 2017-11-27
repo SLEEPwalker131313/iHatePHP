@@ -158,32 +158,23 @@
     //   }
     //   echo '\n';
     // }
-    echo $comits;
-    echo '\n';
-    echo $comits['1'];
-    echo '\n';
-    echo $comits('1');
-    echo '\n';
-    echo $comits(1);
-    echo '\n';
-    echo $comits[1];
-    echo '\n';
-    // $i = 0;
-    // foreach($commits as $key => $value)
-    // {
-    //   $i = $i + 1;
-    //   foreach($value as $keyv => $valuev) {
-    //     if(strcasecmp($keyv, 'commit')) {
-    //       foreach($valuev as $keyvv => $valuevv) {
-    //         echo $keyvv." has the value ". $valuevv." ";
-    //       }
-    //     }
-    //     if(strcasecmp($keyv, 'html_url') || strcasecmp($keyv, 'login')
-    //     || strcasecmp($keyv, 'avatar_url') || strcasecmp($keyv, 'avatar_url'))
-    //       echo $keyv." has the value ". $valuev." ";
-    //   }
-    //   echo '\n'.$i.'\n';
-    // }
+
+    $i = 0;
+    foreach($commits as $key => $value)
+    {
+      $i = $i + 1;
+      foreach($value as $keyv => $valuev) {
+        if(strcasecmp($keyv, 'commit')) {
+          foreach($valuev as $keyvv => $valuevv) {
+            echo $keyvv." has the value ". $valuevv." ";
+          }
+        }
+        if(strcasecmp($keyv, 'html_url') || strcasecmp($keyv, 'login')
+        || strcasecmp($keyv, 'avatar_url') || strcasecmp($keyv, 'avatar_url'))
+          echo $keyv." has the value ". $valuev." ";
+      }
+      echo '\n'.$i.'\n';
+    }
 
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
     // echo $feeds;
