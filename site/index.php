@@ -142,7 +142,7 @@
       $output = curl_exec($ch);
       curl_close($ch);
       $result = json_decode(trim($output), true);
-      return $output;
+      return $result;
     }
     // $repos = github_request('https://api.github.com/user/repos?page=1&per_page=100');
     // echo $repos;
