@@ -150,7 +150,7 @@
     // $events = github_request('https://api.github.com/users/:username/events/public?page=1&per_page=5');
     // echo $events;
     $commits = github_request('https://api.github.com/repos/SLEEPwalker131313/iHatePHP/commits');
-    echo $commits;
+    return $commits;
 
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
     // echo $feeds;
