@@ -116,7 +116,7 @@
 // print_r($feeds);
     //console.log("test");
     //console.log();
-    console.log(<?php print_r('fdsfd'); ?>);
+    console.log(<?php echo 'fdsfd'; ?>);
    });
   </script>
   <script src="js/bootstrap.min.js"></script>
