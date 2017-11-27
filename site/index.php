@@ -158,7 +158,10 @@
     //   }
     //   echo '\n';
     // }
-    print_r($commits);
+    foreach($commits as $key => $value)
+    {
+      echo $key." has the value". $value;
+    }
 
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
     // echo $feeds;
