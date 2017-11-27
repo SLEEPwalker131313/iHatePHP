@@ -114,8 +114,8 @@
 // print_r($events);
 // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
 // print_r($feeds);
-    console.log("test");
-    console.log(<?php return 1; ?>);
+    //console.log("test");
+    //console.log(<?php return 1; ?>);
     console.log(<?php print_r(2); ?>);
    });
   </script>
