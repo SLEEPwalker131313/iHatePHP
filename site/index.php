@@ -163,6 +163,11 @@
     {
       $i = $i + 1;
       foreach($value as $keyv => $valuev) {
+        if(strcasecmp($keyv, 'commit')) {
+          foreach($valuev as $keyvv => $valuevv) {
+            echo $keyvv." has the value ". $valuevv." ";
+          }
+        }
         echo $keyv." has the value ". $valuev." ";
       }
       echo '\n'.$i.'\n';
