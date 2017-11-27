@@ -166,7 +166,7 @@
       // if(strcasecmp($key, 'commit')) {
         // foreach($valuev as $keyvv => $valuevv) {
           foreach($commitContent as $commitLocalKey => $commitLocalValue) {
-            if(strcasecmp($commitLocalKey, 'html_url'))
+            if(strcasecmp($commitLocalKey, 'html_url') == 0)
               echo $commitLocalKey." has the value ". $commitLocalValue." ";
           }
         // }
