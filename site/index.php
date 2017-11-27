@@ -161,8 +161,9 @@
     foreach($commits as $key => $value)
     {
       foreach($value as $keyv => $valuev) {
-        echo $keyv." has the value". $valuev;
+        echo $keyv." has the value". $valuev." ";
       }
+      echo '\n';
     }
 
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
