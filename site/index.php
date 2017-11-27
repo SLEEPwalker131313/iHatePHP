@@ -158,7 +158,16 @@
     //   }
     //   echo '\n';
     // }
+    echo $comits;
+    echo '\n';
     echo $comits['1'];
+    echo '\n';
+    echo $comits('1');
+    echo '\n';
+    echo $comits(1);
+    echo '\n';
+    echo $comits[1];
+    echo '\n';
     // $i = 0;
     // foreach($commits as $key => $value)
     // {
