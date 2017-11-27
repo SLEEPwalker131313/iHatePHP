@@ -163,7 +163,7 @@
     {
       $i = $i + 1;
       foreach($value as $keyv => $valuev) {
-        echo $keyv." has the value". $valuev." ";
+        echo $keyv." has the value ". $valuev." ";
       }
       echo '\n'.$i.'\n';
     }
