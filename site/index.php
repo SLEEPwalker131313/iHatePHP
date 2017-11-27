@@ -182,13 +182,10 @@
           }
           if(strcasecmp($commitLocalKey, 'committer') == 0) {
             echo '\ncommiterstart\n';
-            foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
-              // if($commitLocalKey, 'message') == 0) {
-                echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
-              // }
+            foreach($commitLocalValue as $committerLocalKey => $committerLocalValue) {
+                echo $committerLocalKey." has the value ". $committerLocalValue." ";
             }
             echo '\ncommiterstart\n';
-
           }
         }
         // }
