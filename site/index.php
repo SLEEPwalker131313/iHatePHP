@@ -180,6 +180,7 @@
             }
             echo '\ncommitstart\n';
           }
+          
           if(strcasecmp($commitLocalKey, 'committer') == 0) {
             echo '\ncommiterstart\n';
             foreach($commitLocalValue as $committerLocalKey => $committerLocalValue) {
