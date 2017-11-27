@@ -144,6 +144,10 @@
     }
     $repos = github_request('https://api.github.com/user/repos?page=1&per_page=100');
     echo $repos;
+    $events = github_request('https://api.github.com/users/:username/events/public?page=1&per_page=5');
+    echo $events;
+    $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
+    echo $feeds;
     ?>);
    });
   </script>
