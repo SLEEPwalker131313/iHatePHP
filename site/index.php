@@ -117,7 +117,33 @@
     //console.log("test");
     //console.log();
     console.log(<?php
-      echo 221;
+        function github_request($url)
+    {
+      // echo "test";
+      $ch = curl_init();
+
+      // Basic Authentication with token
+      // https://developer.github.com/v3/auth/
+      // https://github.com/blog/1509-personal-api-tokens
+      // https://github.com/settings/tokens
+      $access = 'username:token';
+
+      curl_setopt($ch, CURLOPT_URL, $url);
+      //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/xml'));
+      curl_setopt($ch, CURLOPT_USERAGENT, 'Agent smith');
+      curl_setopt($ch, CURLOPT_HEADER, 0);
+      curl_setopt($ch, CURLOPT_USERPWD, $access);
+      curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+      $output = curl_exec($ch);
+      curl_close($ch);
+      $result = json_decode(trim($output), true);
+      return $result;
+    }
+    $repos = github_request('https://api.github.com/user/repos?page=1&per_page=100');
+    echo $repos;
     ?>);
    });
   </script>
