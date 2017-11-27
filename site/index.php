@@ -79,9 +79,10 @@
     ?>
     ');
    });
+
    $('#gitBtn').click(function(){
 
-    console.log(<?php
+    <?php
     function github_request($url)
 {
   $ch = curl_init();
@@ -113,7 +114,7 @@ $events = github_request('https://api.github.com/users/:username/events/public?p
 print_r($events);
 $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
 print_r($feeds);
-    ?>);
+    ?>
    });
   </script>
   <script src="js/bootstrap.min.js"></script>
