@@ -161,10 +161,10 @@
     //   echo '\n';
     // }
     $i = 0;
-    foreach($commits as $commitLocalNumber => $commitContent)      echo '<div class="commit" id="commit'.$i.'">test'.$i.'';
+    foreach($commits as $commitLocalNumber => $commitContent)
       // if(strcasecmp($key, 'commit')) {
       {
-
+        echo '<div class="commit" id="commit'.$i.'">test'.$i.'';
         // foreach($valuev as $keyvv => $valuevv) {
           foreach($commitContent as $commitLocalKey => $commitLocalValue) {
             if(strcasecmp($commitLocalKey, 'html_url') == 0) {
