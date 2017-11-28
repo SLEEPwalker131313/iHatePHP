@@ -170,6 +170,34 @@
             if(strcasecmp($commitLocalKey, 'html_url') == 0) {
               // echo $commitLocalKey." has the value ". $commitLocalValue." ";
           }
+          if(strcasecmp($commitLocalKey, 'commit') == 0) {
+            // echo '\ncommitstart\n';
+            echo '<div class="col-md-10 commitContent">content';
+            foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
+              if(strcasecmp($commitLocalKey2, 'message') == 0) {
+                echo '<div class="row message">'.$commitLocalValue2.'</div>';
+                // echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
+              }
+              if(strcasecmp($commitLocalKey2, 'committer') == 0) {
+                // echo '\ncommitterstart\n';
+                foreach($commitLocalValue2 as $committerLocalKey => $committerLocalValue) {
+                  // if(strcasecmp($commitLocalKey2, 'message') == 0)
+                  // if(strcasecmp($committerLocalKey, 'login') == 0
+                // || strcasecmp($committerLocalKey, 'avatar_url') == 0
+                // || strcasecmp($committerLocalKey, 'html_url') == 0
+                // || strcasecmp($committerLocalKey, 'date') == 0 ) {
+                if(strcasecmp($committerLocalKey, 'date') == 0) {
+                    // echo $committerLocalKey." has the value ". $committerLocalValue." ";
+                    echo '<div class="row date">'.$committerLocalValue.'</div>';
+                  }
+                }
+                // echo '\ncommitterend\n';
+              }
+            }
+            echo '</div>';
+            // echo '\ncommitend\n';
+
+          }
           if(strcasecmp($commitLocalKey, 'author') == 0) {
             // echo '\nauthorstart\n';
             foreach($commitLocalValue as $authorLocalKey => $authorLocalValue) {
@@ -183,32 +211,6 @@
             // echo '\nauthorerend\n';
           }
 
-          if(strcasecmp($commitLocalKey, 'commit') == 0) {
-            // echo '\ncommitstart\n';
-            echo '<div class="col-md-10 commitContent">content';
-            foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
-              if(strcasecmp($commitLocalKey2, 'message') == 0) {
-                // echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
-              }
-              if(strcasecmp($commitLocalKey2, 'committer') == 0) {
-                // echo '\ncommitterstart\n';
-                foreach($commitLocalValue2 as $committerLocalKey => $committerLocalValue) {
-                  // if(strcasecmp($commitLocalKey2, 'message') == 0)
-                  // if(strcasecmp($committerLocalKey, 'login') == 0
-                // || strcasecmp($committerLocalKey, 'avatar_url') == 0
-                // || strcasecmp($committerLocalKey, 'html_url') == 0
-                // || strcasecmp($committerLocalKey, 'date') == 0 ) {
-                if(strcasecmp($committerLocalKey, 'date') == 0) {
-                    // echo $committerLocalKey." has the value ". $committerLocalValue." ";
-                  }
-                }
-                // echo '\ncommitterend\n';
-              }
-            }
-            echo '</div>';
-            // echo '\ncommitend\n';
-
-          }
         }
         echo '</div>';
 
