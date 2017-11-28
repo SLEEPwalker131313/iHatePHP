@@ -163,7 +163,7 @@
     $i = 0;
     foreach($commits as $commitLocalNumber => $commitContent)
     {
-      echo '<div>test'.$i.'';
+      echo '<div class=\'container\' id=\'container'.$i.'\'>test'.$i.'';
       $i = $i + 1;
       // if(strcasecmp($key, 'commit')) {
         // foreach($valuev as $keyvv => $valuevv) {
