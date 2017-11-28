@@ -244,9 +244,14 @@
           }
 
         }
-        echo $_POST['commitsInput'];
-        echo $_REQUEST['commitsInput'];
-        echo '\n';
+        if($_SERVER['REQUEST_METHOD'] == 'POST') {
+          echo '\npost\n';
+          $commitsNum = $_POST['commitsInput'];
+          echo $commitsNum;
+        }
+        // echo $_POST['commitsInput'];
+        // echo $_REQUEST['commitsInput'];
+        // echo '\n';
         echo '<div class="row commit list-group-item" id="commit'.$i.'">';
           echo '<div class="col-md-2 avatar"><a href="'.$authorLink.'"><img src="'.$avatar_url.'" width="36" height="36"></a></div>';
           echo '<div class="col-md-10 content">';
