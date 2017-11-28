@@ -82,6 +82,7 @@
    });
 
    $('#gitBtn').click(function(){
+
     // console.log(
 //     function github_request($url)
 // {
@@ -117,7 +118,7 @@
 // print_r($feeds);
     //console.log("test");
     //console.log();
-    console.log('\
+    $('#gitBox').html('\
     <?php
         function github_request($url)
     {
@@ -159,10 +160,11 @@
     //   echo '\n';
     // }
 
-    $i = 0;
+    // $i = 0;
     foreach($commits as $commitLocalNumber => $commitContent)
     {
-      $i = $i + 1;
+      echo "<div class='row' id='commitLocalNumber'.$commitLocalNumber> olo";
+      // $i = $i + 1;
       // if(strcasecmp($key, 'commit')) {
         // foreach($valuev as $keyvv => $valuevv) {
           foreach($commitContent as $commitLocalKey => $commitLocalValue) {
@@ -218,7 +220,8 @@
         // || strcasecmp($key, 'avatar_url') || strcasecmp($key, 'avatar_url'))
           // echo $key." has the value ". $value." ";
           // }
-      echo '\n'.$i.'\n';
+      // echo '\n'.$i.'\n';
+      echo '</div>';
     }
 
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
