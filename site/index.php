@@ -180,24 +180,24 @@
           if(strcasecmp($commitLocalKey, 'commit') == 0) {
             echo '\ncommitstart\n';
             foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
-              if(strcasecmp($commitLocalKey2, 'message') == 0) {
+              // if(strcasecmp($commitLocalKey2, 'message') == 0) {
                 echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
-              }
+              // }
               if(strcasecmp($commitLocalKey2, 'committer') == 0) {
                 echo '\ncommitterstart\n';
                 foreach($commitLocalValue2 as $committerLocalKey => $committerLocalValue) {
                   // if(strcasecmp($commitLocalKey2, 'message') == 0)
-                  if(strcasecmp($committerLocalKey, 'login') == 0
-                || strcasecmp($committerLocalKey, 'avatar_url') == 0
-                || strcasecmp($committerLocalKey, 'html_url') == 0
-                || strcasecmp($committerLocalKey, 'date') == 0 ) {
+                  // if(strcasecmp($committerLocalKey, 'login') == 0
+                // || strcasecmp($committerLocalKey, 'avatar_url') == 0
+                // || strcasecmp($committerLocalKey, 'html_url') == 0
+                // || strcasecmp($committerLocalKey, 'date') == 0 ) {
                     echo $committerLocalKey." has the value ". $committerLocalValue." ";
-                  }
+                  // }
                 }
                 echo '\ncommitterend\n';
               }
             }
-            echo '\ncommitstart\n';
+            echo '\ncommitend\n';
 
           }
         }
