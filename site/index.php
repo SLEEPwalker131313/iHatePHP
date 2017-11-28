@@ -164,7 +164,7 @@
     foreach($commits as $commitLocalNumber => $commitContent)
     {
       echo '<div class="commit" id="commit'.$i.'">test'.$i.'';
-      $i = $i + 1;
+      echo '<div class="avatar"><img src="https://avatars3.githubusercontent.com/u/9293641?s=72&v=4" width="36" height="36"></div>';
       // if(strcasecmp($key, 'commit')) {
         // foreach($valuev as $keyvv => $valuevv) {
           foreach($commitContent as $commitLocalKey => $commitLocalValue) {
@@ -222,6 +222,7 @@
         // || strcasecmp($key, 'avatar_url') || strcasecmp($key, 'avatar_url'))
           // echo $key." has the value ". $value." ";
           // }
+      $i = $i + 1;
       echo '\n'.$i.'\n';
     }
 
