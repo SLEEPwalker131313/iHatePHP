@@ -190,6 +190,9 @@
                 $avatar_url = $authorLocalValue;
                 // echo '<div class="col-md-2 avatar"><img src="'.$authorLocalValue.'" width="36" height="36"></div>';
               }
+              if(strcasecmp($authorLocalKey, 'html_url') == 0){
+                    $authorLink = $authorLocalValue;
+                }
             }
             // echo '\nauthorerend\n';
           }
@@ -215,10 +218,6 @@
                     // echo '<div class="row date"><div class="col-md-3">'.$committerLocalValue;.'</div><div class="col-md-9">'.$author.'</div></div>';
                     $commitDate = $committerLocalValue;
                   }
-                if(strcasecmp($committerLocalKey, 'html_url') == 0){
-                      $authorLink = $committerLocalValue;
-                  }
-
                 }
                 // echo '\ncommitterend\n';
               }
