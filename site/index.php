@@ -48,7 +48,14 @@
     </div>
    </div>
    <div class="row">
-     <div class="btn btn-default" id="gitBtn">Git</div>
+     <form role="form" class="form-inline">
+       <div class="form-group">
+        <label for="commits">Посмотрим чего мы там нашкодили?</label>
+        <input type="commitsInput" class="form-control" id="commitsInput" placeholder="Колличество выводимых commit-ов(1-30)">
+       </div>
+       <div type="submit" class="btn btn-success" id="gitBtn">Показать</div>
+      </form>
+     <!-- <div class="btn btn-default" id="gitBtn">Git</div> -->
      <div id="gitBoxWrapper">some text</div>
    </div>
   </div>
