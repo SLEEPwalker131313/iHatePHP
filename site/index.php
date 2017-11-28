@@ -53,7 +53,7 @@
         <label for="commits" class="col-md-4">Посмотрим чего мы там нашкодили?</label>
         <input type="commitsInput" class="form-control col-md-8" id="commitsInput" placeholder="Колличество выводимых commit-ов (1-30)" style="width: 75%;">
        </div>
-       <div type="submit" class="btn btn-success btn-large col-md-3" id="gitBtn">Показать</div>
+       <div type="submit" class="btn btn-success btn-large col-md-3 btn-default" id="gitBtn">Показать</div>
       </form>
      <!-- <div class="btn btn-default" id="gitBtn">Git</div> -->
      <div id="gitBoxWrapper">some text</div>
@@ -96,7 +96,9 @@
 
    $('#gitBtn').on("click", function(){
 
-    // console.log(
+     var formInputValue = $('#commitsInput').val();
+     if(!isNaN(formInputValue) &&  isFinite(formInputValue) && Math.floor(formInputValue) > 0 && Math.floor(formInputValue) < 31) {
+          // console.log(
 //     function github_request($url)
 // {
   // echo "test";
@@ -273,6 +275,11 @@
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
     // echo $feeds;
     ?>');
+  } else {
+    $('#gitBoxWrapper').html('Тут мог быть alert, но я пожалел пользователей этого прекрасного сервиса. Вроде и похоже на число... Но пустая строка. Или несколько чисел. Откуда мне знать');
+  }
+
+  }
    });
   </script>
   <script src="js/bootstrap.min.js"></script>
