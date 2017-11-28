@@ -164,7 +164,7 @@
     foreach($commits as $commitLocalNumber => $commitContent)
       // if(strcasecmp($key, 'commit')) {
       {
-        echo '<div class="row commit" id="commit'.$i.'">test'.$i.'';
+        echo '<div class="row commit" id="commit'.$i.'">';
         // foreach($valuev as $keyvv => $valuevv) {
           foreach($commitContent as $commitLocalKey => $commitLocalValue) {
             if(strcasecmp($commitLocalKey, 'html_url') == 0) {
@@ -185,7 +185,7 @@
 
           if(strcasecmp($commitLocalKey, 'commit') == 0) {
             // echo '\ncommitstart\n';
-            echo '<div class="col-md-10 commitContent">';
+            echo '<div class="col-md-10 commitContent">content';
             foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
               if(strcasecmp($commitLocalKey2, 'message') == 0) {
                 // echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
