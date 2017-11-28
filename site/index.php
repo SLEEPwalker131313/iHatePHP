@@ -97,7 +97,7 @@
    $('#gitBtn').on("click", function(){
 
      var formInputValue = $('#commitsInput').val();
-     if(!isNaN(formInputValue) &&  isFinite(formInputValue) && Math.floor(formInputValue) > 0 && Math.floor(formInputValue) < 31) {
+     if(!isNaN(formInputValue) && isFinite(formInputValue) && Math.floor(formInputValue) > 0 && Math.floor(formInputValue) < 31) {
           // console.log(
 //     function github_request($url)
 // {
