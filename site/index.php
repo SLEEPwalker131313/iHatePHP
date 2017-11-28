@@ -43,7 +43,7 @@
    </div>
    <div class="row">
      <div class="btn btn-default" id="gitBtn">Git</div>
-     <div id="gitBox">some text</div>
+     <div id="gitBoxWrapper">some text</div>
    </div>
   </div>
   <script>
@@ -81,7 +81,7 @@
     ');
    });
 
-   $('#gitBtn').click(function(){
+   $('#gitBtn').on("click", function(){
 
     // console.log(
 //     function github_request($url)
@@ -149,6 +149,7 @@
     //
     // $events = github_request('https://api.github.com/users/:username/events/public?page=1&per_page=5');
     // echo $events;
+    $('#gitBoxWrapper').html('<div id="gitBox"></div>');
     $('#gitBox').append('\
     <?php
     $commits = github_request('https://api.github.com/repos/SLEEPwalker131313/iHatePHP/commits');
