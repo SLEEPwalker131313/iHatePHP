@@ -176,9 +176,9 @@
               // if(strcasecmp($authorLocalKey, 'login') == 0
               // || strcasecmp($authorLocalKey, 'html_url') == 0
               // || strcasecmp($authorLocalKey, 'avatar_url') == 0)
-              if(strcasecmp($authorLocalKey, 'avatar_url') == 0 {
-                echo 'dsad';
-              }
+              // if(strcasecmp($authorLocalKey, 'avatar_url') == 0 {
+              //   echo 'dsad';
+              // }
             }
             echo '\nauthorerend\n';
           }
