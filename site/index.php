@@ -251,7 +251,6 @@
         // } else{
         //   echo 'hey!'';
         // }
-        echo $_POST['commitsInput'];
         // echo $_REQUEST['commitsInput'];
         // echo '\n';
         echo '<div class="row commit list-group-item" id="commit'.$i.'">';
@@ -296,6 +295,16 @@
   } else if(Math.floor(formInputValue) < 0 || Math.floor(formInputValue) > 31) {
     $('#gitBoxWrapper').html('Тут мог быть alert, но я пожалел пользователей этого прекрасного сервиса. Да да, число, но вот с диапазоном проблемы. Мы и так вам дробную часть выкидываем. (1-30)');
   }
+
+  $( "#gitBox").children().each( function( index, element) {
+	var tmp = $( element).attr( "id");
+  var tmpp = tmp.split('t')[1];
+  if(tmpp > formInputValue){
+    $( element ).remove();
+  }
+    //console.log( "id:", tmp.split('t')[1]);
+  });
+
    });
   </script>
   <script src="js/bootstrap.min.js"></script>
