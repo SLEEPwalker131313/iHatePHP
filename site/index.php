@@ -162,6 +162,7 @@
     // }
     $i = 0;
     $author = 0;
+    $authorLink = 0;
     $avatar_url = 0;
     $commitDate = 0;
     $message = 0;
@@ -214,6 +215,10 @@
                     // echo '<div class="row date"><div class="col-md-3">'.$committerLocalValue;.'</div><div class="col-md-9">'.$author.'</div></div>';
                     $commitDate = $committerLocalValue;
                   }
+                if(strcasecmp($committerLocalKey, 'html_url') == 0){
+                      $authorLink = $committerLocalValue;
+                  }
+
                 }
                 // echo '\ncommitterend\n';
               }
@@ -227,10 +232,10 @@
         echo '<div class="row commit" id="commit'.$i.'">';
           echo '<div class="col-md-2 avatar"><img src="'.$avatar_url.'" width="36" height="36"></div>';
           echo '<div class="col-md-10 content">';
-            echo '<div class="row message">'.$message.'</div>';
+            echo '<div class="row message"><a href="'.$commitLink.'">'.$message.'</a></div>';
             echo '<div class="row date">';
+              echo '<div class="col-md-8 commitAuthor"><a href="'.$authorLink.'">'.$author.'</a></div>';
               echo '<div class="col-md-4 commitDate">'.$commitDate.'</div>';
-              echo '<div class="col-md-8 commitAuthor">'.$author.'</div>';
             echo '</div>';
           echo '</div>';
         echo '</div>';
