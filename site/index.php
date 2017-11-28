@@ -177,7 +177,7 @@
               // || strcasecmp($authorLocalKey, 'html_url') == 0
               // || strcasecmp($authorLocalKey, 'avatar_url') == 0)
               if(strcasecmp($authorLocalKey, 'avatar_url') == 0 {
-                echo '<div class="avatar">fsdfds</div>';
+                echo 'dsad';
               }
             }
             echo '\nauthorerend\n';
