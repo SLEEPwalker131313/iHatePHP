@@ -187,11 +187,11 @@
                 echo '\ncommitterstart\n';
                 foreach($commitLocalValue2 as $committerLocalKey => $committerLocalValue) {
                   // if(strcasecmp($commitLocalKey2, 'message') == 0)
-                  if(strcasecmp($authorLocalKey, 'login') == 0
-                || strcasecmp($authorLocalKey, 'avatar_url') == 0
-                || strcasecmp($authorLocalKey, 'html_url') == 0
-                || strcasecmp($authorLocalKey, 'date') == 0 ) {
-                    echo $authorLocalKey." has the value ". $authorLocalValue." ";
+                  if(strcasecmp($committerLocalKey, 'login') == 0
+                || strcasecmp($committerLocalKey, 'avatar_url') == 0
+                || strcasecmp($committerLocalKey, 'html_url') == 0
+                || strcasecmp($committerLocalKey, 'date') == 0 ) {
+                    echo $committerLocalKey." has the value ". $committerLocalValue." ";
                   }
                 }
                 echo '\ncommitterend\n';
