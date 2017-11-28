@@ -48,7 +48,7 @@
     </div>
    </div>
    <div class="row">
-     <form role="form" class="form-inline row" action="http://apmathproject.azurewebsites.net/index.php" method="post">
+     <form role="form" class="form-inline row" method="post">
        <div class="form-group col-md-9">
         <label for="commits" class="col-md-4">Посмотрим чего мы там нашкодили?</label>
         <input type="commitsInput" class="form-control col-md-8" name="commitsInput" id="commitsInput" placeholder="Колличество выводимых commit-ов (1-30)" style="width: 75%;">
@@ -248,6 +248,8 @@
           echo '\npost\n';
           $commitsNum = $_POST['commitsInput'];
           echo $commitsNum;
+        } else{
+          echo 'hey!';
         }
         // echo $_POST['commitsInput'];
         // echo $_REQUEST['commitsInput'];
