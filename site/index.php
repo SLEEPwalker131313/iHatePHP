@@ -155,7 +155,7 @@
     //
     // $events = github_request('https://api.github.com/users/:username/events/public?page=1&per_page=5');
     // echo $events;
-    $('#gitBoxWrapper').html('<div id="gitBox" style="list-group"></div>');
+    $('#gitBoxWrapper').html('<div id="gitBox" style="list-group list-unstyled"></div>');
     $('#gitBox').append('\
     <?php
     $commits = github_request('https://api.github.com/repos/SLEEPwalker131313/iHatePHP/commits');
@@ -235,7 +235,7 @@
           }
 
         }
-        echo '<div class="row commit list-group-item list-unstyled" id="commit'.$i.'">';
+        echo '<div class="row commit list-group-item" id="commit'.$i.'">';
           echo '<div class="col-md-2 avatar"><a href="'.$authorLink.'"><img src="'.$avatar_url.'" width="36" height="36"></a></div>';
           echo '<div class="col-md-10 content">';
             echo '<div class="row message"><a href="'.$commitLink.'">'.$message.'</a></div>';
