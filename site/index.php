@@ -118,7 +118,7 @@
 // print_r($feeds);
     //console.log("test");
     //console.log();
-    $('#gitBox').html('\
+    console.log('\
     <?php
         function github_request($url)
     {
