@@ -224,11 +224,11 @@
           }
 
         }
-        // echo '<div class="row commit" id="commit'.$i.'">';
+        echo '<div class="row commit" id="commit'.$i.'">hth';
           // echo '<div class="col-md-2 avatar"><img src="'.$avatar_url.'" width="36" height="36"></div>';
         //   echo '<div class="col-md-10 content"><div class="row message">'.$message.'</div><div class="row date">'.$date.'</div></div>';
-        // echo '</div>';
-        echo 'hi';
+        echo '</div>';
+        // echo 'hi';
 
         // }
       // }
