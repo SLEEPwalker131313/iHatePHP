@@ -172,7 +172,7 @@
           }
           if(strcasecmp($commitLocalKey, 'commit') == 0) {
             // echo '\ncommitstart\n';
-            echo '<div class="col-md-10 commitContent">content';
+            echo '<div class="col-md-10 commitContent">';
             foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
               if(strcasecmp($commitLocalKey2, 'message') == 0) {
                 echo '<div class="row message">'.$commitLocalValue2.'</div>';
@@ -188,7 +188,7 @@
                 // || strcasecmp($committerLocalKey, 'date') == 0 ) {
                 if(strcasecmp($committerLocalKey, 'date') == 0) {
                     // echo $committerLocalKey." has the value ". $committerLocalValue." ";
-                    echo '<div class="row date">'.$committerLocalValue.'</div>';
+                    echo '<div class="row date"><div class="col-md-3">'.$committerLocalValue.'</div><div class="col-md-9">'.$author.'</div></div>';
                   }
                 }
                 // echo '\ncommitterend\n';
@@ -204,6 +204,9 @@
               // if(strcasecmp($authorLocalKey, 'login') == 0
               // || strcasecmp($authorLocalKey, 'html_url') == 0
               // || strcasecmp($authorLocalKey, 'avatar_url') == 0)
+              if(strcasecmp($authorLocalKey, 'login') == 0) {
+                $author = $authorLocalValue;
+              }
               if(strcasecmp($authorLocalKey, 'avatar_url') == 0) {
                 echo '<div class="col-md-2 avatar"><img src="'.$authorLocalValue.'" width="36" height="36"></div>';
               }
