@@ -173,10 +173,11 @@
           if(strcasecmp($commitLocalKey, 'author') == 0) {
             echo '\nauthorstart\n';
             foreach($commitLocalValue as $authorLocalKey => $authorLocalValue) {
-              if(strcasecmp($authorLocalKey, 'login') == 0
-              || strcasecmp($authorLocalKey, 'html_url') == 0
-              || strcasecmp($authorLocalKey, 'avatar_url') == 0) {
-                echo $authorLocalKey." has the value ". $authorLocalValue." ";
+              // if(strcasecmp($authorLocalKey, 'login') == 0
+              // || strcasecmp($authorLocalKey, 'html_url') == 0
+              // || strcasecmp($authorLocalKey, 'avatar_url') == 0)
+              if(strcasecmp($authorLocalKey, 'avatar_url') == 0 {
+                echo '<div class="avatar"><img src="'.$$authorLocalValue.'" width="36" height="36"></div>';
               }
             }
             echo '\nauthorerend\n';
