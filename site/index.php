@@ -164,25 +164,26 @@
     foreach($commits as $commitLocalNumber => $commitContent)
     {
       echo '<div class="commit" id="commit'.$i.'">test'.$i.'';
-      echo '<div class="avatar"><img src="https://avatars3.githubusercontent.com/u/9293641?s=72&v=4" width="36" height="36"></div>';
       // if(strcasecmp($key, 'commit')) {
         // foreach($valuev as $keyvv => $valuevv) {
-          foreach($commitContent as $commitLocalKey => $commitLocalValue) {
-            if(strcasecmp($commitLocalKey, 'html_url') == 0) {
-              echo $commitLocalKey." has the value ". $commitLocalValue." ";
-          }
           if(strcasecmp($commitLocalKey, 'author') == 0) {
             echo '\nauthorstart\n';
             foreach($commitLocalValue as $authorLocalKey => $authorLocalValue) {
+              if(strcasecmp($authorLocalKey, 'avatar_url') == 0) {
+                echo '<div class="avatar"><img src="'.$authorLocalValue.'" width="36" height="36"></div>';
+              }
               if(strcasecmp($authorLocalKey, 'login') == 0
-              || strcasecmp($authorLocalKey, 'html_url') == 0
-              || strcasecmp($authorLocalKey, 'avatar_url') == 0) {
+              || strcasecmp($authorLocalKey, 'html_url') == 0) {
                 echo $authorLocalKey." has the value ". $authorLocalValue." ";
               }
             }
             echo '\nauthorerend\n';
           }
-
+          foreach($commitContent as $commitLocalKey => $commitLocalValue) {
+            if(strcasecmp($commitLocalKey, 'html_url') == 0) {
+              echo $commitLocalKey." has the value ". $commitLocalValue." ";
+          }
+          
           if(strcasecmp($commitLocalKey, 'commit') == 0) {
             echo '\ncommitstart\n';
             foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
