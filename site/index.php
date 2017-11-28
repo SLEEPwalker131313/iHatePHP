@@ -177,7 +177,7 @@
               // || strcasecmp($authorLocalKey, 'html_url') == 0
               // || strcasecmp($authorLocalKey, 'avatar_url') == 0)
               if(strcasecmp($authorLocalKey, 'avatar_url') == 0) {
-                echo '<div class="col-md-3 avatar"><img src="'.$authorLocalValue.'" width="36" height="36"></div>';
+                echo '<div class="col-md-2 avatar"><img src="'.$authorLocalValue.'" width="36" height="36"></div>';
               }
             }
             // echo '\nauthorerend\n';
@@ -185,6 +185,7 @@
 
           if(strcasecmp($commitLocalKey, 'commit') == 0) {
             // echo '\ncommitstart\n';
+            echo '<div class="col-md-10 commitContent">';
             foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
               if(strcasecmp($commitLocalKey2, 'message') == 0) {
                 // echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
@@ -204,6 +205,7 @@
                 // echo '\ncommitterend\n';
               }
             }
+            echo '</div>';
             // echo '\ncommitend\n';
 
           }
@@ -222,7 +224,7 @@
         // || strcasecmp($key, 'avatar_url') || strcasecmp($key, 'avatar_url'))
           // echo $key." has the value ". $value." ";
           // }
-      // $i = $i + 1;
+      $i = $i + 1;
       // echo '\n'.$i.'\n';
     }
 
