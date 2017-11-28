@@ -197,7 +197,7 @@
             // echo '<div class="col-md-10 commitContent">';
             foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
               if(strcasecmp($commitLocalKey2, 'message') == 0) {
-                $mess = $commitLocalValue2;
+                $message = $commitLocalValue2;
                 // echo '<div class="row message">'.$commitLocalValue2.'</div>';
                 // echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
               }
@@ -226,7 +226,10 @@
         }
         echo '<div class="row commit" id="commit'.$i.'">hth';
           echo '<div class="col-md-2 avatar"><img src="'.$avatar_url.'" width="36" height="36"></div>';
-        //   echo '<div class="col-md-10 content"><div class="row message">'.$message.'</div><div class="row date">'.$date.'</div></div>';
+          echo '<div class="col-md-10 content">';
+            echo '<div class="row message">'.$message.'</div>';
+            echo '<div class="row date">'.$date.'</div>';
+          echo '</div>';
         echo '</div>';
         // echo 'hi';
 
