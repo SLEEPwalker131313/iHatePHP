@@ -163,7 +163,7 @@
     $i = 0;
     $author = 0;
     $avatar_url = 0;
-    $date = 0;
+    $commitDate = 0;
     $message = 0;
     $commitLink = 0;
     foreach($commits as $commitLocalNumber => $commitContent)
@@ -224,11 +224,14 @@
           }
 
         }
-        echo '<div class="row commit" id="commit'.$i.'">hth';
+        echo '<div class="row commit" id="commit'.$i.'">';
           echo '<div class="col-md-2 avatar"><img src="'.$avatar_url.'" width="36" height="36"></div>';
           echo '<div class="col-md-10 content">';
             echo '<div class="row message">'.$message.'</div>';
-            echo '<div class="row date">'.$date.'</div>';
+            echo '<div class="row date">';
+              echo '<div class="col-md-4 commitDate">'.$commitDate.'</div>';
+              echo '<div class="col-md-8 commitAuthor">'.$author.'</div>';
+            echo '</div>';
           echo '</div>';
         echo '</div>';
         // echo 'hi';
