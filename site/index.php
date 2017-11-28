@@ -118,6 +118,7 @@
 // print_r($feeds);
     //console.log("test");
     //console.log();
+    $('#gitBox').html('\
     <?php
         function github_request($url)
     {
@@ -135,9 +136,7 @@
       curl_close($ch);
       $result = json_decode(trim($output), true);
       return $result;
-    } ?>
-    $('#gitBox').html('\
-    <?php
+    }
     $commits = github_request('https://api.github.com/repos/SLEEPwalker131313/iHatePHP/commits');
     foreach($commits as $commitLocalNumber => $commitContent)
     {
