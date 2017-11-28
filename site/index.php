@@ -164,7 +164,7 @@
     foreach($commits as $commitLocalNumber => $commitContent)
       // if(strcasecmp($key, 'commit')) {
       {
-        echo '<div class="commit" id="commit'.$i.'">test'.$i.'';
+        echo '<div class="row commit" id="commit'.$i.'">test'.$i.'';
         // foreach($valuev as $keyvv => $valuevv) {
           foreach($commitContent as $commitLocalKey => $commitLocalValue) {
             if(strcasecmp($commitLocalKey, 'html_url') == 0) {
@@ -177,7 +177,7 @@
               // || strcasecmp($authorLocalKey, 'html_url') == 0
               // || strcasecmp($authorLocalKey, 'avatar_url') == 0)
               if(strcasecmp($authorLocalKey, 'avatar_url') == 0) {
-                echo '<div class="avatar">ava</div>';
+                echo '<div class="col-md-3 avatar"><img src="'.$authorLocalValue.'" width="36" height="36"></div>';
               }
             }
             // echo '\nauthorerend\n';
