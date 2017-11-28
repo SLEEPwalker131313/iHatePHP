@@ -118,21 +118,12 @@
 // print_r($feeds);
     //console.log("test");
     //console.log();
-    $('#gitBox').html('\
     <?php
-        function github_request($url)
-    {
-      // echo "test";
+        function github_request($url)\
+    {\
       $ch = curl_init();
-
-      // Basic Authentication with token
-      // https://developer.github.com/v3/auth/
-      // https://github.com/blog/1509-personal-api-tokens
-      // https://github.com/settings/tokens
       $access = 'tenminutesgit:10minutesgitpassword';
-
       curl_setopt($ch, CURLOPT_URL, $url);
-      //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/xml'));
       curl_setopt($ch, CURLOPT_USERAGENT, 'Agent smith');
       curl_setopt($ch, CURLOPT_HEADER, 0);
       curl_setopt($ch, CURLOPT_USERPWD, $access);
@@ -144,29 +135,13 @@
       curl_close($ch);
       $result = json_decode(trim($output), true);
       return $result;
-    }
-    // $repos = github_request('https://api.github.com/user/repos?page=1&per_page=100');
-    // echo $repos;
-    //
-    // $events = github_request('https://api.github.com/users/:username/events/public?page=1&per_page=5');
-    // echo $events;
+    } ?>
+    $('#gitBox').html('\
+    <?php
     $commits = github_request('https://api.github.com/repos/SLEEPwalker131313/iHatePHP/commits');
-    // echo gettype($commits(1));
-    // foreach ($commits as &$value) {
-    //   foreach ($value as &$tmp) {
-    //     echo $tmp;
-    //     echo ' ';
-    //   }
-    //   echo '\n';
-    // }
-
-    // $i = 0;
     foreach($commits as $commitLocalNumber => $commitContent)
     {
-      echo '<div class=\'row\'> olo';
-      // $i = $i + 1;
-      // if(strcasecmp($key, 'commit')) {
-        // foreach($valuev as $keyvv => $valuevv) {
+      echo '<div> olo';
           foreach($commitContent as $commitLocalKey => $commitLocalValue) {
             if(strcasecmp($commitLocalKey, 'html_url') == 0) {
               echo $commitLocalKey." has the value ". $commitLocalValue." ";
@@ -192,11 +167,6 @@
               if(strcasecmp($commitLocalKey2, 'committer') == 0) {
                 echo '\ncommitterstart\n';
                 foreach($commitLocalValue2 as $committerLocalKey => $committerLocalValue) {
-                  // if(strcasecmp($commitLocalKey2, 'message') == 0)
-                  // if(strcasecmp($committerLocalKey, 'login') == 0
-                // || strcasecmp($committerLocalKey, 'avatar_url') == 0
-                // || strcasecmp($committerLocalKey, 'html_url') == 0
-                // || strcasecmp($committerLocalKey, 'date') == 0 ) {
                 if(strcasecmp($committerLocalKey, 'date') == 0) {
                     echo $committerLocalKey." has the value ". $committerLocalValue." ";
                   }
@@ -205,27 +175,10 @@
               }
             }
             echo '\ncommitend\n';
-
           }
         }
-        // }
-      // }
-      // foreach($value as $keyv => $valuev) {
-      //   if(strcasecmp($keyv, 'commit')) {
-      //     foreach($valuev as $keyvv => $valuevv) {
-      //       echo $keyvv." has the value ". $valuevv." ";
-      //     }
-      //   }
-        // if(strcasecmp($key, 'html_url') || strcasecmp($key, 'login')
-        // || strcasecmp($key, 'avatar_url') || strcasecmp($key, 'avatar_url'))
-          // echo $key." has the value ". $value." ";
-          // }
-      // echo '\n'.$i.'\n';
       echo '</div>';
     }
-
-    // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
-    // echo $feeds;
     ?>');
    });
   </script>
