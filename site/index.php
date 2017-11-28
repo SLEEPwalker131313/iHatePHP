@@ -119,8 +119,8 @@
     //console.log("test");
     //console.log();
     <?php
-        function github_request($url)\
-    {\
+        function github_request($url)
+    {
       $ch = curl_init();
       $access = 'tenminutesgit:10minutesgitpassword';
       curl_setopt($ch, CURLOPT_URL, $url);
@@ -141,7 +141,6 @@
     $commits = github_request('https://api.github.com/repos/SLEEPwalker131313/iHatePHP/commits');
     foreach($commits as $commitLocalNumber => $commitContent)
     {
-      echo '<div> olo';
           foreach($commitContent as $commitLocalKey => $commitLocalValue) {
             if(strcasecmp($commitLocalKey, 'html_url') == 0) {
               echo $commitLocalKey." has the value ". $commitLocalValue." ";
@@ -173,11 +172,9 @@
                 }
                 echo '\ncommitterend\n';
               }
-            }
             echo '\ncommitend\n';
           }
         }
-      echo '</div>';
     }
     ?>');
    });
