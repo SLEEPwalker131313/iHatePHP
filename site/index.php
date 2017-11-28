@@ -249,7 +249,7 @@
           echo '<div class="col-md-10 content">';
             echo '<div class="row message"><a href="'.$commitLink.'">'.$message.'</a></div>';
             echo '<div class="row date">';
-              echo '<div class="col-md-8 commitAuthor"><a href="'.$authorLink.'"><small>'.$author.'</small></a></div>';
+              echo '<div class="col-md-8 commitAuthor"><a href="'.$authorLink.'"><small>'.$author.'</small>'.formInputValue.'</a></div>';
               echo '<div class="col-md-4 commitDate">'.$commitDate.'</div>';
             echo '</div>';
           echo '</div>';
