@@ -10,12 +10,6 @@
    .btn{
     height: 80px;
    }
-   a {
-     text-decoration: none;
-   }
-   .message{
-
-   }
   </style>
   <br>
   <div class="container">
@@ -98,54 +92,13 @@
 
      var formInputValue = $('#commitsInput').val();
      if(!isNaN(formInputValue) && isFinite(formInputValue) && Math.floor(formInputValue) > 0 && Math.floor(formInputValue) < 31) {
-//     function github_request($url)
-// {
-  // echo "test";
-//   $ch = curl_init();
-//
-//   // Basic Authentication with token
-//   // https://developer.github.com/v3/auth/
-//   // https://github.com/blog/1509-personal-api-tokens
-//   // https://github.com/settings/tokens
-//   $access = 'username:token';
-//
-//   curl_setopt($ch, CURLOPT_URL, $url);
-//   //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/xml'));
-//   curl_setopt($ch, CURLOPT_USERAGENT, 'Agent smith');
-//   curl_setopt($ch, CURLOPT_HEADER, 0);
-//   curl_setopt($ch, CURLOPT_USERPWD, $access);
-//   curl_setopt($ch, CURLOPT_TIMEOUT, 30);
-//   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-//   curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-//   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-//   $output = curl_exec($ch);
-//   curl_close($ch);
-//   $result = json_decode(trim($output), true);
-//   return $result;
-// }
-// $repos = github_request('https://api.github.com/user/repos?page=1&per_page=100');
-// print_r($response);
-// //$events = github_request('https://api.github.com/users/:username/events?page=1&per_page=5');
-// $events = github_request('https://api.github.com/users/:username/events/public?page=1&per_page=5');
-// print_r($events);
-// $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
-// print_r($feeds);
-    //console.log("test");
-    //console.log();
     <?php
         function github_request($url)
     {
-      // echo "test";
       $ch = curl_init();
-
-      // Basic Authentication with token
-      // https://developer.github.com/v3/auth/
-      // https://github.com/blog/1509-personal-api-tokens
-      // https://github.com/settings/tokens
       $access = 'tenminutesgit:10minutesgitpassword';
 
       curl_setopt($ch, CURLOPT_URL, $url);
-      //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/xml'));
       curl_setopt($ch, CURLOPT_USERAGENT, 'Agent smith');
       curl_setopt($ch, CURLOPT_HEADER, 0);
       curl_setopt($ch, CURLOPT_USERPWD, $access);
@@ -158,23 +111,10 @@
       $result = json_decode(trim($output), true);
       return $result;
     } ?>
-    // $repos = github_request('https://api.github.com/user/repos?page=1&per_page=100');
-    // echo $repos;
-    //
-    // $events = github_request('https://api.github.com/users/:username/events/public?page=1&per_page=5');
-    // echo $events;
     $('#gitBoxWrapper').html('<div id="gitBox" style="list-group list-unstyled"></div>');
     $('#gitBox').append('\
     <?php
     $commits = github_request('https://api.github.com/repos/SLEEPwalker131313/iHatePHP/commits');
-    // echo gettype($commits(1));
-    // foreach ($commits as &$value) {
-    //   foreach ($value as &$tmp) {
-    //     echo $tmp;
-    //     echo ' ';
-    //   }
-    //   echo '\n';
-    // }
     $i = 0;
     $author = 0;
     $authorLink = 0;
@@ -183,75 +123,41 @@
     $message = 0;
     $commitLink = 0;
     foreach($commits as $commitLocalNumber => $commitContent)
-      // if(strcasecmp($key, 'commit')) {
       {
         $commitNumber = $commitLocalNumber;
-        // foreach($valuev as $keyvv => $valuevv) {
           foreach($commitContent as $commitLocalKey => $commitLocalValue) {
             if(strcasecmp($commitLocalKey, 'html_url') == 0) {
-              // echo $commitLocalKey." has the value ". $commitLocalValue;." ";
               $commitLink = $commitLocalValue;
           }
           if(strcasecmp($commitLocalKey, 'author') == 0) {
-            // echo '\nauthorstart\n';
             foreach($commitLocalValue as $authorLocalKey => $authorLocalValue) {
-              // if(strcasecmp($authorLocalKey, 'login') == 0
-              // || strcasecmp($authorLocalKey, 'html_url') == 0
-              // || strcasecmp($authorLocalKey, 'avatar_url') == 0)
               if(strcasecmp($authorLocalKey, 'login') == 0) {
                 $author = $authorLocalValue;
               }
               if(strcasecmp($authorLocalKey, 'avatar_url') == 0) {
                 $avatar_url = $authorLocalValue;
-                // echo '<div class="col-md-2 avatar"><img src="'.$authorLocalValue.'" width="36" height="36"></div>';
               }
               if(strcasecmp($authorLocalKey, 'html_url') == 0){
                     $authorLink = $authorLocalValue;
                 }
             }
-            // echo '\nauthorerend\n';
           }
           if(strcasecmp($commitLocalKey, 'commit') == 0) {
-            // echo '\ncommitstart\n';
-            // echo '<div class="col-md-10 commitContent">';
             foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
               if(strcasecmp($commitLocalKey2, 'message') == 0) {
                 $message = $commitLocalValue2;
-                // echo '<div class="row message">'.$commitLocalValue2.'</div>';
-                // echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
               }
               if(strcasecmp($commitLocalKey2, 'committer') == 0) {
-                // echo '\ncommitterstart\n';
                 foreach($commitLocalValue2 as $committerLocalKey => $committerLocalValue) {
-                  // if(strcasecmp($commitLocalKey2, 'message') == 0)
-                  // if(strcasecmp($committerLocalKey, 'login') == 0
-                // || strcasecmp($committerLocalKey, 'avatar_url') == 0
-                // || strcasecmp($committerLocalKey, 'html_url') == 0
-                // || strcasecmp($committerLocalKey, 'date') == 0 ) {
                 if(strcasecmp($committerLocalKey, 'date') == 0) {
-                    // echo $committerLocalKey." has the value ". $committerLocalValue." ";
-                    // echo '<div class="row date"><div class="col-md-3">'.$committerLocalValue;.'</div><div class="col-md-9">'.$author.'</div></div>';
                     $commitDate = $committerLocalValue;
                   }
                 }
-                // echo '\ncommitterend\n';
               }
             }
-            // echo '</div>';
-            // echo '\ncommitend\n';
-
           }
 
         }
-        // if($_SERVER['REQUEST_METHOD'] == 'POST') {
-        //   echo '\npost\n';
-        //   $commitsNum = $_POST['commitsInput'];
-        //   echo $commitsNum;
-        // } else{
-        //   echo 'hey!'';
-        // }
-        // echo $_REQUEST['commitsInput'];
-        // echo '\n';
         echo '<div class="row commit list-group-item" id="commit'.$i.'">';
           echo '<div class="col-md-2 avatar"><a href="'.$authorLink.'"><img src="'.$avatar_url.'" width="36" height="36"></a></div>';
           echo '<div class="col-md-10 content">';
@@ -262,26 +168,9 @@
             echo '</div>';
           echo '</div>';
         echo '</div>';
-        // echo 'hi';
-
-        // }
-      // }
-      // foreach($value as $keyv => $valuev) {
-      //   if(strcasecmp($keyv, 'commit')) {
-      //     foreach($valuev as $keyvv => $valuevv) {
-      //       echo $keyvv." has the value ". $valuevv." ";
-      //     }
-      //   }
-        // if(strcasecmp($key, 'html_url') || strcasecmp($key, 'login')
-        // || strcasecmp($key, 'avatar_url') || strcasecmp($key, 'avatar_url'))
-          // echo $key." has the value ". $value." ";
-          // }
       $i = $i + 1;
-      // echo '\n'.$i.'\n';
     }
 
-    // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
-    // echo $feeds;
     ?>');
   } else if(formInputValue.length == 0) {
     $('#gitBoxWrapper').html('Тут мог быть alert, но я пожалел пользователей этого прекрасного сервиса. Эта штука выглядит как пустая строка.');
@@ -301,7 +190,6 @@
   if(parseFloat(tmpp) >= parseFloat(formInputValue)){
     $( element ).remove();
   }
-    //console.log( "id:", tmp.split('t')[1]);
   });
 
    });
