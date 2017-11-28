@@ -275,8 +275,13 @@
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
     // echo $feeds;
     ?>');
-  } else {
+  } else if(!isNaN(formInputValue)){
+    $('#gitBoxWrapper').html('Тут мог быть alert, но я пожалел пользователей этого прекрасного сервиса. Ну вот прям совсем не похоже на число');
+  }
+  else if(isFinite(formInputValue)){
     $('#gitBoxWrapper').html('Тут мог быть alert, но я пожалел пользователей этого прекрасного сервиса. Вроде и похоже на число... Но пустая строка. Или несколько чисел. Откуда мне знать');
+  } else if(Math.floor(formInputValue) < 0 || Math.floor(formInputValue) > 31) {
+    $('#gitBoxWrapper').html('Тут мог быть alert, но я пожалел пользователей этого прекрасного сервиса. Да да, число, но вот с диапазоном проблемы. Мы и так вам дробную часть выкидываем. (1-30)');
   }
    });
   </script>
