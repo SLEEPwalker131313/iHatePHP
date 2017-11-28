@@ -166,19 +166,17 @@
       // if(strcasecmp($key, 'commit')) {
         // foreach($valuev as $keyvv => $valuevv) {
           foreach($commitContent as $commitLocalKey => $commitLocalValue) {
-            if(strcasecmp($commitLocalKey, 'html_url') == 0
-            || strcasecmp($commitLocalKey, 'login') == 0
-            || strcasecmp($commitLocalKey, 'avatar_url') == 0) {
+            if(strcasecmp($commitLocalKey, 'html_url') == 0) {
               echo $commitLocalKey." has the value ". $commitLocalValue." ";
           }
-          if(strcasecmp($commitLocalKey, 'author') == 0) {
-            echo '\nauthorstart\n';
-            foreach($commitLocalValue as $authorLocalKey => $authorLocalValue) {
-              // if(strcasecmp($commitLocalKey2, 'message') == 0)
-                echo $authorLocalKey." has the value ". $authorLocalValue." ";
-            }
-            echo '\nauthorerend\n';
-          }
+          // if(strcasecmp($commitLocalKey, 'author') == 0) {
+          //   echo '\nauthorstart\n';
+          //   foreach($commitLocalValue as $authorLocalKey => $authorLocalValue) {
+          //     // if(strcasecmp($commitLocalKey2, 'message') == 0)
+          //       echo $authorLocalKey." has the value ". $authorLocalValue." ";
+          //   }
+          //   echo '\nauthorerend\n';
+          // }
           if(strcasecmp($commitLocalKey, 'commit') == 0) {
             echo '\ncommitstart\n';
             foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
@@ -189,7 +187,12 @@
                 echo '\ncommitterstart\n';
                 foreach($commitLocalValue2 as $committerLocalKey => $committerLocalValue) {
                   // if(strcasecmp($commitLocalKey2, 'message') == 0)
-                    echo $committerLocalKey." has the value ". $committerLocalValue." ";
+                  if(strcasecmp($authorLocalKey, 'login') == 0
+                || strcasecmp($authorLocalKey, 'avatar_url') == 0
+                || strcasecmp($authorLocalKey, 'html_url') == 0
+                || strcasecmp($authorLocalKey, 'date') == 0 ) {
+                    echo $authorLocalKey." has the value ". $authorLocalValue." ";
+                  }
                 }
                 echo '\ncommitterend\n';
               }
