@@ -1,6 +1,6 @@
 # iHatePHP
 iHatePHP is a unique service that allows you to obtain information about the service and nothing more! 
-This service contains information about what software it was written, and it contains comments about the 
+This service contains information about software it was written, and it contains comments about the 
 complexity of the final project. In addition, the service is able to access the Date and time, as well as 
 the actual commits for this service in real time.
 
