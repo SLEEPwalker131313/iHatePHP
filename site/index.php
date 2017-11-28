@@ -299,7 +299,7 @@
   $( "#gitBox").children().each( function( index, element) {
 	var tmp = $( element).attr( "id");
   var tmpp = tmp.split('t')[1];
-  if(tmpp > formInputValue){
+  if(parseFloat(tmpp) > parseFloat(formInputValue)){
     $( element ).remove();
   }
     //console.log( "id:", tmp.split('t')[1]);
