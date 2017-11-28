@@ -1,3 +1,4 @@
 language: php
+script: build.sh
 deploy:
   provider: azure_web_apps
