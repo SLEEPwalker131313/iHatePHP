@@ -275,8 +275,11 @@
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
     // echo $feeds;
     ?>');
-  } else if(isNaN(formInputValue)){
-    $('#gitBoxWrapper').html('Тут мог быть alert, но я пожалел пользователей этого прекрасного сервиса. Ну вот прям совсем не похоже на число');
+  } else if(formInputValue.length == 0) {
+    $('#gitBoxWrapper').html('Тут мог быть alert, но я пожалел пользователей этого прекрасного сервиса. Эта штука выглядит как пустая строка.');
+  }
+  else if(isNaN(parseFloat(formInputValue))){
+    $('#gitBoxWrapper').html('Тут мог быть alert, но я пожалел пользователей этого прекрасного сервиса. Ну вот прям совсем не похоже на число. А на несколько чисел или просто строку чутка похоже.');
   }
   else if(!isFinite(formInputValue)){
     $('#gitBoxWrapper').html('Тут мог быть alert, но я пожалел пользователей этого прекрасного сервиса. Вроде и похоже на число... Но пустая строка. Или несколько чисел. Откуда мне знать');
