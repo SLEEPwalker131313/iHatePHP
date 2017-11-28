@@ -173,8 +173,8 @@
             echo '\nauthorstart\n';
             foreach($commitLocalValue as $authorLocalKey => $authorLocalValue) {
               if(strcasecmp($authorLocalKey, 'login') == 0
-            || strcasecmp($authorLocalKey, 'html_url') == 0
-            || strcasecmp($authorLocalKey, 'avatar_url') == 0) {
+              || strcasecmp($authorLocalKey, 'html_url') == 0
+              || strcasecmp($authorLocalKey, 'avatar_url') == 0) {
                 echo $authorLocalKey." has the value ". $authorLocalValue." ";
               }
             }
@@ -184,9 +184,9 @@
           if(strcasecmp($commitLocalKey, 'commit') == 0) {
             echo '\ncommitstart\n';
             foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
-              // if(strcasecmp($commitLocalKey2, 'message') == 0) {
+              if(strcasecmp($commitLocalKey2, 'message') == 0) {
                 echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
-              // }
+              }
               if(strcasecmp($commitLocalKey2, 'committer') == 0) {
                 echo '\ncommitterstart\n';
                 foreach($commitLocalValue2 as $committerLocalKey => $committerLocalValue) {
