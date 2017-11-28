@@ -161,17 +161,17 @@
     //   echo '\n';
     // }
     $i = 0;
-    foreach($commits as $commitLocalNumber => $commitContent)
-    {
-      echo '<div class="commit" id="commit'.$i.'">test'.$i.'';
+    foreach($commits as $commitLocalNumber => $commitContent)      echo '<div class="commit" id="commit'.$i.'">test'.$i.'';
       // if(strcasecmp($key, 'commit')) {
+      {
+
         // foreach($valuev as $keyvv => $valuevv) {
           foreach($commitContent as $commitLocalKey => $commitLocalValue) {
             if(strcasecmp($commitLocalKey, 'html_url') == 0) {
-              echo $commitLocalKey." has the value ". $commitLocalValue." ";
+              // echo $commitLocalKey." has the value ". $commitLocalValue." ";
           }
           if(strcasecmp($commitLocalKey, 'author') == 0) {
-            echo '\nauthorstart\n';
+            // echo '\nauthorstart\n';
             foreach($commitLocalValue as $authorLocalKey => $authorLocalValue) {
               // if(strcasecmp($authorLocalKey, 'login') == 0
               // || strcasecmp($authorLocalKey, 'html_url') == 0
@@ -180,17 +180,17 @@
                 echo '<div class="avatar">ava</div>';
               }
             }
-            echo '\nauthorerend\n';
+            // echo '\nauthorerend\n';
           }
 
           if(strcasecmp($commitLocalKey, 'commit') == 0) {
-            echo '\ncommitstart\n';
+            // echo '\ncommitstart\n';
             foreach($commitLocalValue as $commitLocalKey2 => $commitLocalValue2) {
               if(strcasecmp($commitLocalKey2, 'message') == 0) {
-                echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
+                // echo $commitLocalKey2." has the value ". $commitLocalValue2." ";
               }
               if(strcasecmp($commitLocalKey2, 'committer') == 0) {
-                echo '\ncommitterstart\n';
+                // echo '\ncommitterstart\n';
                 foreach($commitLocalValue2 as $committerLocalKey => $committerLocalValue) {
                   // if(strcasecmp($commitLocalKey2, 'message') == 0)
                   // if(strcasecmp($committerLocalKey, 'login') == 0
@@ -198,18 +198,18 @@
                 // || strcasecmp($committerLocalKey, 'html_url') == 0
                 // || strcasecmp($committerLocalKey, 'date') == 0 ) {
                 if(strcasecmp($committerLocalKey, 'date') == 0) {
-                    echo $committerLocalKey." has the value ". $committerLocalValue." ";
+                    // echo $committerLocalKey." has the value ". $committerLocalValue." ";
                   }
                 }
-                echo '\ncommitterend\n';
+                // echo '\ncommitterend\n';
               }
             }
-            echo '\ncommitend\n';
+            // echo '\ncommitend\n';
 
           }
-          echo '</div>';
-
         }
+        echo '</div>';
+
         // }
       // }
       // foreach($value as $keyv => $valuev) {
@@ -222,8 +222,8 @@
         // || strcasecmp($key, 'avatar_url') || strcasecmp($key, 'avatar_url'))
           // echo $key." has the value ". $value." ";
           // }
-      $i = $i + 1;
-      echo '\n'.$i.'\n';
+      // $i = $i + 1;
+      // echo '\n'.$i.'\n';
     }
 
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
