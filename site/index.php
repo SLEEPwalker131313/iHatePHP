@@ -164,9 +164,6 @@
     //
     // $events = github_request('https://api.github.com/users/:username/events/public?page=1&per_page=5');
     // echo $events;
-    $.get('http://dayte2.com/index.php', {message:message}, function(data)	{
-    	alert('Сервер ответил: '+data);
-    });
     $('#gitBoxWrapper').html('<div id="gitBox" style="list-group list-unstyled"></div>');
     $('#gitBox').append('\
     <?php
