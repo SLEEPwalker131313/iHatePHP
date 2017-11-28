@@ -149,7 +149,7 @@
     //
     // $events = github_request('https://api.github.com/users/:username/events/public?page=1&per_page=5');
     // echo $events;
-    console.log('\
+    $('#gitBox').append('\
     <?php
     $commits = github_request('https://api.github.com/repos/SLEEPwalker131313/iHatePHP/commits');
     // echo gettype($commits(1));
@@ -160,7 +160,7 @@
     //   }
     //   echo '\n';
     // }
-
+    echo '<div>test';
     $i = 0;
     foreach($commits as $commitLocalNumber => $commitContent)
     {
@@ -221,6 +221,7 @@
           // echo $key." has the value ". $value." ";
           // }
       echo '\n'.$i.'\n';
+      echo '</div>';
     }
 
     // $feeds = github_request('https://api.github.com/feeds/:username?page=1&per_page=5');
