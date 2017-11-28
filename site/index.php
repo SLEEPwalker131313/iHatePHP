@@ -244,14 +244,14 @@
           }
 
         }
-        if($_SERVER['REQUEST_METHOD'] == 'POST') {
-          echo '\npost\n';
-          $commitsNum = $_POST['commitsInput'];
-          echo $commitsNum;
-        } else{
-          echo 'hey!';
-        }
-        // echo $_POST['commitsInput'];
+        // if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        //   echo '\npost\n';
+        //   $commitsNum = $_POST['commitsInput'];
+        //   echo $commitsNum;
+        // } else{
+        //   echo 'hey!'';
+        // }
+        echo $_POST['commitsInput'];
         // echo $_REQUEST['commitsInput'];
         // echo '\n';
         echo '<div class="row commit list-group-item" id="commit'.$i.'">';
