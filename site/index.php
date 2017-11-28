@@ -10,6 +10,12 @@
    .btn{
     height: 80px;
    }
+   a {
+     text-decoration: none;
+   }
+   .message{
+
+   }
   </style>
   <br>
   <div class="container">
@@ -229,12 +235,12 @@
           }
 
         }
-        echo '<div class="row commit list-group-item" id="commit'.$i.'">';
+        echo '<div class="row commit list-group-item list-unstyled" id="commit'.$i.'">';
           echo '<div class="col-md-2 avatar"><a href="'.$authorLink.'"><img src="'.$avatar_url.'" width="36" height="36"></a></div>';
           echo '<div class="col-md-10 content">';
             echo '<div class="row message"><a href="'.$commitLink.'">'.$message.'</a></div>';
             echo '<div class="row date">';
-              echo '<div class="col-md-8 commitAuthor"><a href="'.$authorLink.'">'.$author.'</a></div>';
+              echo '<div class="col-md-8 commitAuthor"><a href="'.$authorLink.'"><small>'.$author.'</small></a></div>';
               echo '<div class="col-md-4 commitDate">'.$commitDate.'</div>';
             echo '</div>';
           echo '</div>';
