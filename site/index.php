@@ -169,6 +169,7 @@
           foreach($commitContent as $commitLocalKey => $commitLocalValue) {
             if(strcasecmp($commitLocalKey, 'html_url') == 0) {
               // echo $commitLocalKey." has the value ". $commitLocalValue." ";
+              echo 'test'.$commitLocalValue['author']['login'].'';
           }
           if(strcasecmp($commitLocalKey, 'author') == 0) {
             // echo '\nauthorstart\n';
