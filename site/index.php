@@ -118,7 +118,6 @@
 // print_r($feeds);
     //console.log("test");
     //console.log();
-    console.log('\
     <?php
         function github_request($url)
     {
@@ -144,12 +143,14 @@
       curl_close($ch);
       $result = json_decode(trim($output), true);
       return $result;
-    }
+    } ?>
     // $repos = github_request('https://api.github.com/user/repos?page=1&per_page=100');
     // echo $repos;
     //
     // $events = github_request('https://api.github.com/users/:username/events/public?page=1&per_page=5');
     // echo $events;
+    console.log('\
+    <?php
     $commits = github_request('https://api.github.com/repos/SLEEPwalker131313/iHatePHP/commits');
     // echo gettype($commits(1));
     // foreach ($commits as &$value) {
