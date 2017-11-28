@@ -229,7 +229,7 @@
 
         }
         echo '<div class="row commit" id="commit'.$i.'">';
-          echo '<div class="col-md-2 avatar"><img src="'.$avatar_url.'" width="36" height="36"></div>';
+          echo '<div class="col-md-2 avatar"><a href="'.$authorLink.'"><img src="'.$avatar_url.'" width="36" height="36"></a></div>';
           echo '<div class="col-md-10 content">';
             echo '<div class="row message"><a href="'.$commitLink.'">'.$message.'</a></div>';
             echo '<div class="row date">';
