@@ -48,10 +48,10 @@
     </div>
    </div>
    <div class="row">
-     <form role="form" class="form-inline row">
+     <form role="form" class="form-inline row" action="http://apmathproject.azurewebsites.net/index.php" method="post">
        <div class="form-group col-md-9">
         <label for="commits" class="col-md-4">Посмотрим чего мы там нашкодили?</label>
-        <input type="commitsInput" class="form-control col-md-8" id="commitsInput" placeholder="Колличество выводимых commit-ов (1-30)" style="width: 75%;">
+        <input type="commitsInput" class="form-control col-md-8" name="commitsInput" id="commitsInput" placeholder="Колличество выводимых commit-ов (1-30)" style="width: 75%;">
        </div>
        <div type="submit" class="btn btn-success btn-large col-md-3 btn-default" id="gitBtn">Показать</div>
       </form>
@@ -164,6 +164,9 @@
     //
     // $events = github_request('https://api.github.com/users/:username/events/public?page=1&per_page=5');
     // echo $events;
+    $.get('http://dayte2.com/index.php', {message:message}, function(data)	{
+    	alert('Сервер ответил: '+data);
+    });
     $('#gitBoxWrapper').html('<div id="gitBox" style="list-group list-unstyled"></div>');
     $('#gitBox').append('\
     <?php
@@ -244,8 +247,7 @@
           }
 
         }
-        $tmpVar = var formInputValue;
-        echo $tmpVar; 
+        echo $_POST['commitsInput'];
         echo '<div class="row commit list-group-item" id="commit'.$i.'">';
           echo '<div class="col-md-2 avatar"><a href="'.$authorLink.'"><img src="'.$avatar_url.'" width="36" height="36"></a></div>';
           echo '<div class="col-md-10 content">';
